@@ -61,8 +61,8 @@ export default {
     },
     setCanvas(callback) {
       this.canvas = this.$refs.canvas;
-      this.canvas.width = `${this.width}`;
-      this.canvas.height = `${this.height}`;
+      this.canvas.width = this.$refs.video.clientWidth;
+      this.canvas.height = this.$refs.video.clientHeight;
       this.context = this.canvas.getContext("2d");
       this.context.drawImage(this.video, 0, 0);
       this.canvas.toBlob(
@@ -114,5 +114,9 @@ canvas {
   top: 0;
   left: 0;
   opacity: 0;
+}
+video {
+  width: 100%;
+  height: 100%;
 }
 </style>
