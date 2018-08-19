@@ -64,7 +64,7 @@ export default {
       this.canvas.width = this.$refs.video.clientWidth;
       this.canvas.height = this.$refs.video.clientHeight;
       this.context = this.canvas.getContext("2d");
-      this.context.drawImage(this.video, 0, 0);
+      this.context.drawImage(this.video, 0, 0, this.canvas.width, this.canvas.height);
       this.canvas.toBlob(
         blob => {
           this.picture = blob;
