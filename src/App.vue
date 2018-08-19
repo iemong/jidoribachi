@@ -1,15 +1,15 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<template lang="pug">
+    #app
+        link(type='text/css', rel='stylesheet', href='https://www.gstatic.com/firebasejs/ui/3.2.0/firebase-ui-auth.css')
+        router-view
 </template>
 
 <style lang="scss">
+body {
+  height: 100vh;
+}
 #app {
+  height: inherit;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
